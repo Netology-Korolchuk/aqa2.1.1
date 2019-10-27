@@ -12,14 +12,14 @@ class CallbackTest {
     void shouldTestAllFieldsCorrectly() {
         open("http://localhost:9999");
 
-        $("[data-test-id=name] input").setValue("Василий");
+        $("[data-test-id=name] input").setValue("Г‚Г Г±ГЁГ«ГЁГ©");
         $("[data-test-id=phone] input").setValue("+79270000000");
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $("[data-test-id=order-success]").shouldHave(exactText("Г‚Г ГёГ  Г§Г ГїГўГЄГ  ГіГ±ГЇГҐГёГ­Г® Г®ГІГЇГ°Г ГўГ«ГҐГ­Г ! ГЌГ Гё Г¬ГҐГ­ГҐГ¤Г¦ГҐГ° Г±ГўГїГ¦ГҐГІГ±Гї Г± ГўГ Г¬ГЁ Гў ГЎГ«ГЁГ¦Г Г©ГёГҐГҐ ГўГ°ГҐГ¬Гї."));
     }
 
-
+/*
     @Test
     void shouldTestNameFieldEngTextNoCorrectly() {
 
@@ -27,6 +27,7 @@ class CallbackTest {
 
         $("[data-test-id=name] input").setValue("Ivan Petrov");
         $(".button").click();
-        $(".input_invalid").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+        $(".input_invalid").shouldHave(exactText("Г€Г¬Гї ГЁ Г”Г Г¬ГЁГ«ГЁГї ГіГЄГ Г§Г Г­Г»ГҐ Г­ГҐГўГҐГ°Г­Г®. Г„Г®ГЇГіГ±ГІГЁГ¬Г» ГІГ®Г«ГјГЄГ® Г°ГіГ±Г±ГЄГЁГҐ ГЎГіГЄГўГ», ГЇГ°Г®ГЎГҐГ«Г» ГЁ Г¤ГҐГґГЁГ±Г»."));
     }
+*/
 }
