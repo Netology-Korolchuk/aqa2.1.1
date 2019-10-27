@@ -10,7 +10,6 @@ install:
   # запускаем SUT (запоминаем информацию о процессе в переменной $App)
 
 - ps: $App = Start-Process -FilePath java -ArgumentList "-jar ./artifacts/app-order.jar" -PassThru
-#- ps: $App = Start-Process -FilePath java -ArgumentList "-jar c:/app-order.jar" -PassThru
 
 build_script:
   - ps: ./gradlew test --info "-Dselenide.headless=true"  # стартуем Selenide в Headless-режиме (см.ниже)
