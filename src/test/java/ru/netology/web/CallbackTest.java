@@ -12,10 +12,10 @@ class CallbackTest {
     void shouldTestAllFieldsCorrectly() {
         open("http://localhost:9999");
 
-        $("[data-test-id=name] input").setValue("Василий");
+        $("[data-test-id=name] input").setValue("Р’Р°СЃРёР»РёР№");
         $("[data-test-id=phone] input").setValue("+79270000000");
         $("[data-test-id=agreement]").click();
         $(".button").click();
-        $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
+        $("[data-test-id=order-success]").shouldHave(exactText("Р’Р°С€Р° Р·Р°СЏРІРєР° СѓСЃРїРµС€РЅРѕ РѕС‚РїСЂР°РІР»РµРЅР°! РќР°С€ РјРµРЅРµРґР¶РµСЂ СЃРІСЏР¶РµС‚СЃСЏ СЃ РІР°РјРё РІ Р±Р»РёР¶Р°Р№С€РµРµ РІСЂРµРјСЏ."));
     }
 }
